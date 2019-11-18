@@ -2,6 +2,9 @@
 set incsearch
 set hlsearch
 
+set foldmethod=indent
+
+
 " enter the current millenium
 set nocompatible
 

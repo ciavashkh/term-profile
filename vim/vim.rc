@@ -1,0 +1,32 @@
+" GLOBAL
+set incsearch
+set hlsearch
+
+" the leader character
+let mapleader = " "
+
+set foldmethod=indent
+
+" enter the current millenium
+set nocompatible
+
+" enable syntax and plugins (for netrw)
+syntax enable
+filetype plugin on
+
+" Search down into subfolders
+" Provides tab-completion for all file-related tasks
+set path+=**
+
+" Tweaks for browsing
+
+let g:netrw_banner = 0       " disable annoying banner
+let g:netrw_liststyle = 3    " tree view
+let g:netrw_browse_split = 2
+let g:netrw_altv = 1         " open splits to the right
+let g:netrw_winsize = 80
+let g:netrw_list_hide= '.*\.swp$'
+
+autocmd BufRead *.tf,*.tfvars source ~/.vim/terraform_vim.rc
+autocmd BufRead *.py source ~/.vim/python_vim.rc
+
